@@ -56,6 +56,7 @@ export class ChatMainComponent implements OnInit{
     }
     
     this._clientWrapper.sendMessage(body).subscribe((resp)=>{
+      this.message = ''
       this.loadChatHistory(this.chattingActiveBuddyProfileID)
     })
   }

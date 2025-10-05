@@ -9,7 +9,7 @@ export const loaderInterceptor: HttpInterceptorFn = (req, next) => {
   const _ngxService = inject(NgxUiLoaderService);
   const _globalService = inject(GlobalService)
 
-  if(req.url.includes('message/getChats')){
+  if(req.url.includes('message/getChats') || req.url.includes('message/send')){
     return next(req)
   }else{
     _globalService.httpRequestCounter++ ;
