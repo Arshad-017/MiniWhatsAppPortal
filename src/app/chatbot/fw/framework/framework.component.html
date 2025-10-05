@@ -1,0 +1,13 @@
+<div class="main">
+    <app-header />
+     <div class="content d-flex p-2">
+        <div>
+            <app-side-nav  [_activeUsers]="_activeUsers"/>
+        </div>
+        <div class="container px-0">
+            <router-outlet />
+        </div>
+     </div>
+
+    <app-footer />
+</div>

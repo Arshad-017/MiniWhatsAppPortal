@@ -1,0 +1,28 @@
+
+<div class="chat-section">
+    @for(message of chatHistory ; track message){
+      <div class="row px-0 mx-0">
+        <div class="col-12 d-flex">
+            <div class="message p-2 mb-1"
+            [ngClass]="profileId == message.sender ? 'profileActive ms-auto' : 'buudy'" >
+                {{ message.content }}
+            </div>
+        </div>
+      </div>
+
+      <div class="row px-0 mx-0">
+        <div class="col-12 d-flex">
+            <div class="mb-1" [ngClass]="profileId == message.sender ? 'ms-auto' : ''" >
+             <div class="date">
+              {{ message.createdAt | date:'medium'   }}
+             </div>
+            </div>
+        </div>
+      </div>
+      
+    }@empty{
+       <div class="p-2">
+         'No Chat History Found'
+       </div>
+    }
+</div>

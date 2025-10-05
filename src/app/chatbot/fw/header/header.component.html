@@ -1,0 +1,41 @@
+<header class="py-3 border-bottom">
+        <div
+          class="container-fluid d-grid gap-3 align-items-center"
+          style="grid-template-columns: 1fr 2fr">
+
+          <div class="dropdown">
+              <img src="img/logo.png" width="40" height="32" alt="chatBot" />
+          </div>
+          <div class="d-flex align-items-center">
+            <form class="w-100 me-3" role="search">
+              <input
+                type="search"
+                class="form-control"
+                placeholder="Search..."
+                aria-label="Search"
+              />
+            </form>
+            <div class="auto-flex dropdown">
+              <a
+                href="#"
+                class="d-block link-body-emphasis text-decoration-none dropdown-toggle"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                <img
+                  src="https://github.com/mdo.png"
+                  alt="mdo"
+                  width="32"
+                  height="32"
+                  class="rounded-circle"
+                />
+              </a>
+              <ul class="dropdown-menu text-small shadow">
+                <li><a class="dropdown-item" >Settings</a></li>
+                <li><a class="dropdown-item" >Profile</a></li>
+                <li><a class="dropdown-item" (click)="logout()">Sign out</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </header>
