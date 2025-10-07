@@ -8,7 +8,7 @@ export class GlobalService {
 
   constructor() { }
 
-  public backEndUrl : string  = 'http://localhost:5003/api';
+  public backEndUrl : string  =  "https://mini-whats-app-api.vercel.app/api" ;// 'http://localhost:5003/api';
   private _activeUsers = [];
   public activeUsersList = new Subject<any>();
   public httpRequestCounter : number = 0;
